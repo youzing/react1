@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../public/css/index.pcss'
 class Index extends React.Component {
     constructor(props) {
         super(props);
@@ -24,9 +24,13 @@ class Index extends React.Component {
 
     render() {
         return (
-            <div>
-                这是首页
-                Seconds: {this.state.seconds}
+            <div className="cont">
+                <div className="top">
+                    这是首页222222
+                </div>
+                <div className="bottom">
+                    Seconds: {this.state.seconds}
+                </div>
             </div>
         );
     }
