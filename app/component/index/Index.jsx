@@ -26,7 +26,8 @@ class Index extends React.Component {
         return (
             <div className="cont">
                 <div className="top">
-                    这是首页222222
+                  <div className="bd_logo1">  这是首页222222</div>
+
                 </div>
                 <div className="bottom">
                     Seconds: {this.state.seconds}
