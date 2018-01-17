@@ -21,6 +21,7 @@ class Seconds extends React.Component {
     }
 
     render() {
+        let a = '12';
         return (
             <div className="cont">
                 <div className="top">
