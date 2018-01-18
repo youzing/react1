@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SecondsBottom from'../common/SecondsBottom'
 class Seconds extends React.Component {
     constructor(props) {
         super(props);
@@ -21,16 +21,16 @@ class Seconds extends React.Component {
     }
 
     render() {
-        let a = '12';
+        let state = this.state;
         return (
             <div className="cont">
                 <div className="top">
                     <i className="bd_logo1"/>
                     {this.props.title}
                 </div>
-                <div className="bottom">
-                    Seconds: {this.state.seconds}
-                </div>
+                <SecondsBottom seconds={this.state.seconds}/>
+                <SecondsBottom seconds={state.seconds}/>
+                <SecondsBottom {...state}/>
             </div>
         );
     }
