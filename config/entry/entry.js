@@ -3,6 +3,20 @@
  */
 let entry = [
     {
+        name: 'demo1',
+        path: 'demo/demo1/Index.jsx',
+        title: 'todolist',
+        keywords: 'todolist,xxx',
+        description: 'this =>todolist1'
+    },
+    {
+        name: 'demo2',
+        path: 'demo/demo2/Index.jsx',
+        title: 'todolist',
+        keywords: 'todolist,xxx',
+        description: 'this =>todolist2'
+    },
+    {
         name: 'index',
         path: 'index/Index.jsx',
         title: '首页',
