@@ -1,31 +1,26 @@
 import React from 'react';
+const LiCont = ({data, list, handleItemEdit, type}) =>
+    <li>
+        {data.title}
+        <button onClick={() => handleItemEdit(data.id, data.status === 1 ? 0 : 1)}
+                className={data.status === 1 ? "del" : "recovery"}>
+            {data.status === 1 ? "删除" : "恢复"}
+        </button>
+    </li>
+;
 
-const List = ({list,handleItemDel,type,handleItemRecovery})=>
+const List = props=>
     <div className="list">
         {
-            list.map(data => [
-                type === 0 ?
-                    <li key={data.id}>
-                        {data.title}
-                        {
-                            data.status === 1 ?
-                                <button onClick={() => handleItemDel(data.id)} className="del">删除</button>
-                                :
-                                <button onClick={() => handleItemRecovery(data.id)} className="recovery">恢复</button>
-                        }
-                    </li>
+            props.list.map(data => [
+                props.type === 0 ?
+                    <LiCont data={data} {...props} key={data.id}/>
                     :
-                    type === 1 && data.status === 1 ?
-                        <li key={data.id}>
-                            {data.title}
-                            <button onClick={() => handleItemDel(data.id)}  className="del">删除</button>
-                        </li>
+                    props.type === 1 && data.status === 1 ?
+                        <LiCont data={data} {...props} key={data.id}/>
                         :
-                        type === 2 && data.status === 0 ?
-                            <li key={data.id}>
-                                {data.title}
-                                <button onClick={() => handleItemRecovery(data.id)}  className="recovery">恢复</button>
-                            </li>
+                        props.type === 2 && data.status === 0 ?
+                            <LiCont data={data} {...props} key={data.id}/>
                             :
                             null
             ])

@@ -16,9 +16,7 @@ class TodoList extends React.Component {
                     status:1,/*0 删除,  1 正常*/
                 }]
         };
-        this.handleAdd = this.handleAdd.bind(this);
-        this.handleItemDel = this.handleItemDel.bind(this);
-        this.handleItemRecovery = this.handleItemRecovery.bind(this)
+        this.handleItemEdit = this.handleItemEdit.bind(this);
     }
     componentDidMount(){
         // alert("11");
@@ -33,33 +31,28 @@ class TodoList extends React.Component {
             alert('不能为空')
         }
     }
-    handleItemDel(id){
+    handleItemEdit(id, type) {
         let list = this.state.list;
-        list.find(data => data.id === id).status = 0;
-        this.setState({list: list})
-    }
-    handleItemRecovery(id) {
-        let list = this.state.list;
-        list.find(data => data.id === id).status = 1;
+        list.find(data => data.id === id).status = type;
         this.setState({list: list})
     }
     render(){
         return(
             <div className="todoList">
                 <input type="text" ref="todoInput"/>
-                <button onClick={this.handleAdd}>添加</button>
+                <button onClick={this.handleItemEdit}>添加</button>
                 <div className="cont">
                     <div className="box">
                         全部
-                        <List list={this.state.list}  handleItemDel={this.handleItemDel} handleItemRecovery={this.handleItemRecovery} type={0}/>
+                        <List list={this.state.list}  handleItemEdit={this.handleItemEdit} type={0}/>
                     </div>
                     <div className="box">
                         未删除
-                        <List list={this.state.list} handleItemDel={this.handleItemDel} type={1}/>
+                        <List list={this.state.list} handleItemEdit={this.handleItemEdit} type={1}/>
                     </div>
                     <div className="box">
                         已删除
-                        <List list={this.state.list} handleItemRecovery={this.handleItemRecovery} type={2}/>
+                        <List list={this.state.list} handleItemEdit={this.handleItemEdit} type={2}/>
                     </div>
                 </div>
             </div>
