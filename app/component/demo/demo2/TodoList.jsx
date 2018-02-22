@@ -18,6 +18,7 @@ class TodoList extends React.Component {
         };
         this.handleAdd = this.handleAdd.bind(this);
         this.handleItemDel = this.handleItemDel.bind(this);
+        this.handleItemRecovery = this.handleItemRecovery.bind(this)
     }
     componentDidMount(){
         // alert("11");
@@ -37,6 +38,11 @@ class TodoList extends React.Component {
         list.find(data => data.id === id).status = 0;
         this.setState({list: list})
     }
+    handleItemRecovery(id) {
+        let list = this.state.list;
+        list.find(data => data.id === id).status = 1;
+        this.setState({list: list})
+    }
     render(){
         return(
             <div className="todoList">
@@ -45,7 +51,7 @@ class TodoList extends React.Component {
                 <div className="cont">
                     <div className="box">
                         全部
-                        <List list={this.state.list} handleItemDel={this.handleItemDel} type={0}/>
+                        <List list={this.state.list}  handleItemDel={this.handleItemDel} handleItemRecovery={this.handleItemRecovery} type={0}/>
                     </div>
                     <div className="box">
                         未删除
@@ -53,7 +59,7 @@ class TodoList extends React.Component {
                     </div>
                     <div className="box">
                         已删除
-                        <List list={this.state.list} handleItemDel={this.handleItemDel} type={2}/>
+                        <List list={this.state.list} handleItemRecovery={this.handleItemRecovery} type={2}/>
                     </div>
                 </div>
             </div>
