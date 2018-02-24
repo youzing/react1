@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01bafedf-c7f4-40a7-970a-f0f5efa095a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/js/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/js/apiRequest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/shop/Index.jsx" afterPath="$PROJECT_DIR$/app/component/shop/Index.jsx" />
     </list>
@@ -99,11 +99,21 @@
       <file leaf-file-name="Index.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/component/shop/Index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="87" lean-forward="true" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
+            <state relative-caret-position="167">
+              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apiRequest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/js/apiRequest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="67" column="21" lean-forward="true" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/component/demo/demo2/List.jsx" />
         <option value="$PROJECT_DIR$/app/component/demo/demo2/TodoList.jsx" />
         <option value="$PROJECT_DIR$/app/public/js/utils.js" />
+        <option value="$PROJECT_DIR$/app/public/js/apiRequest.js" />
         <option value="$PROJECT_DIR$/app/component/shop/Index.jsx" />
       </list>
     </option>
@@ -491,12 +502,12 @@
       <workItem from="1515725701046" duration="71114000" />
       <workItem from="1516692396670" duration="48647000" />
       <workItem from="1519263056374" duration="14167000" />
-      <workItem from="1519437646780" duration="2107000" />
+      <workItem from="1519437646780" duration="5279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152182000" />
+    <option name="totallyTimeSpent" value="155354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -547,13 +558,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.cache-loader/d540db03224b320a6ad695f25d561350.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -827,6 +831,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="0" column="410" lean-forward="false" selection-start-line="0" selection-start-column="410" selection-end-line="0" selection-end-column="410" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -834,6 +839,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="0" column="97278" lean-forward="false" selection-start-line="0" selection-start-column="97278" selection-end-line="0" selection-end-column="97278" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,10 +893,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/apiRequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="67" column="21" lean-forward="true" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/component/shop/Index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="87" lean-forward="true" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
+        <state relative-caret-position="167">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
