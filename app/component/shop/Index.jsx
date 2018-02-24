@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../public/css/shop.pcss'
-
+import '../../public/css/shop.pcss';
+import utils from '../../public/js/utils';
 class Index extends React.Component {
     constructor(props) {
         super(props);
@@ -27,6 +27,9 @@ class Index extends React.Component {
         let {list} = this.state;
         return (
             <div className="content">
+                <div>获取url中参数name的值：{utils.urlParam('name')}</div>
+                <div>15910678888：这{utils.isMobile('15910678888') ? '是' : '不是'}手机号</div>
+                <div>11111111111：这{utils.isMobile('11111111111') ? '是' : '不是'}手机号</div>
                 {
                     list.map(data => <li key={data.id}>{data.title}<button onClick={() => this.handleItemDel(data.id)}>删除</button></li>)
                 }
