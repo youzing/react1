@@ -1,3 +1,4 @@
+import apiManager from '../../public/js/apiManager'
 const xmlNative = opt => {
     opt = opt || {};
     opt.method = opt.method.toUpperCase() || 'POST';
@@ -18,7 +19,7 @@ const xmlNative = opt => {
             params.push(key + '=' + opt.data[key]);
         }
         let postData = params.join('&');
-        xmlHttp.open(opt.method, opt.url + '?' + postData, opt.async);
+        xmlHttp.open(opt.method, opt.url + '?' + postData, opt.async);``
         xmlHttp.send(null);
     }
     xmlHttp.onreadystatechange = () => {
@@ -57,13 +58,13 @@ const ajax = (url, method, data, successCB, errorCB) => {
     });
 };
 const apiRequest = {
-    get: (url, data, successCB, errorCB) => {
-        return ajax(url, "get", data,
+    get: (apiName, data, successCB, errorCB) => {
+        return ajax(apiManager[apiName], "get", data,
             (data, status, xhr) => successCB && successCB(data.data, data.systemDate),
             errorCB);
     },
-    post: (url, data, successCB, errorCB) => {
-        return ajax(url, "post", data,
+    post: (apiName, data, successCB, errorCB) => {
+        return ajax(apiManager[apiName], "post", data,
             (data, status, xhr) => successCB && successCB(data.data, data.systemDate),
             errorCB);
     }

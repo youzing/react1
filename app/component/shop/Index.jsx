@@ -2,6 +2,7 @@ import React from 'react';
 import '../../public/css/shop.pcss';
 import utils from '../../public/js/utils';
 import apiRequest from '../../public/js/apiRequest';
+
 class Index extends React.Component {
     constructor(props) {
         super(props);
@@ -19,11 +20,11 @@ class Index extends React.Component {
             ]
         };
     }
-    componentDidMount(){
-        apiRequest.post('/api/xxx/xxx', {
+    componentDidMount() {
+        apiRequest.post('newsList', {
             start: 0,
             end: 20
-        }, data => console.log(data.code), data => console.log(data.code))
+        }, data => console.log(data), data => console.log(data.code))
     }
     handleItemDel(id) {
         let list = this.state.list;
