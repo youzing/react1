@@ -102,7 +102,7 @@ let config = merge(baseWebpackConfig, {
                 secure: false
             }
         ],
-        /*打开浏览器 并打开本项目网址*/
+        /*打开浏览器 并打开本项目网址  */
         after() {
             opn('http://localhost:' + this.port);
         }

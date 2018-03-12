@@ -15,6 +15,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "react": "^16.2.0",
     "react-cookie": "^0.4.6",
     "react-dom": "^16.2.0"
