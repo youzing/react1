@@ -3,18 +3,11 @@
  */
 let entry = [
     {
-        name: 'demo1',
-        path: 'demo/demo1/Index.jsx',
-        title: 'todolist',
-        keywords: 'todolist,xxx',
-        description: 'this =>todolist1'
-    },
-    {
-        name: 'demo2',
-        path: 'demo/demo2/Index.jsx',
-        title: 'todolist',
-        keywords: 'todolist,xxx',
-        description: 'this =>todolist2'
+        name: 'demo',
+        path: 'demo/Index.jsx',
+        title: '演示',
+        keywords: '演示,xxx',
+        description: '这是我们的演示'
     },
     {
         name: 'index',

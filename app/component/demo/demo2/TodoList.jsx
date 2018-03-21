@@ -23,6 +23,7 @@ class TodoList extends React.Component {
     }
     componentDidMount(){
         // alert("11");
+
         this.handleTodoList()
     }
 
@@ -44,12 +45,13 @@ class TodoList extends React.Component {
     async handleTodoList() {
         let todoList = await apiRequestAsync.post('todoList');
         this.setState({list: todoList.list});
-        let todoList1 = await apiRequestAsync.post('todoList');
-        console.log(todoList1);
-        let todoList2 = await apiRequestAsync.post('todoList');
-        console.log(todoList2);
+        // let todoList1 = await apiRequestAsync.post('todoList');
+        // console.log(todoList1);
+        // let todoList2 = await apiRequestAsync.post('todoList');
+        // console.log(todoList2);
     }
     render(){
+        let {location} = this.props;
         return(
             <div className="todoList">
                 <input type="text" ref="todoInput"/>
@@ -68,7 +70,19 @@ class TodoList extends React.Component {
                         <List list={this.state.list} handleItemEdit={this.handleItemEdit} type={2}/>
                     </div>
                 </div>
+                {
+                    location ?
+                        <div>
+                            <div>hash:{location.hash}</div>
+                            <div>pathname:{location.pathname}</div>
+                            <div>search:{location.search}</div>
+                            <div>state:{location.state && location.state.fromDashboard}</div>
+                        </div>
+                        :
+                        null
+                }
             </div>
+
         )
     }
 }
